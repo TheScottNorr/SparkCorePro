@@ -3,7 +3,7 @@ package ApiSparkCore;
 
 import static Util.Py.list;
 import static Util.Py.truthy;
-import io.spark.core.android.R;
+//import io.spark.core.android.R;
 //import io.spark.core.android.app.AppConfig;
 //import io.spark.core.android.cloud.ApiFacade;
 //import io.spark.core.android.cloud.ApiFacade.ApiResponseReceiver;

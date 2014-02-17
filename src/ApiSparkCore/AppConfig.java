@@ -1,14 +1,26 @@
 package ApiSparkCore;
 
 
-import io.spark.core.android.R;
+
 import android.content.Context;
 
 
 public class AppConfig {
 
 	private static Context ctx;
-
+	private static int staging_hostname;
+	private static int prod_hostname;
+	private static int api_url_scheme;
+	private static int api_host_port;
+	private static int spark_token_creation_credentials;
+	private static int use_staging;
+	private static int api_version;
+	private static int api_param_access_token;
+	private static int smart_config_hello_listen_address;
+	private static int smart_config_hello_port;
+	private static int smart_config_hello_msg_length;
+	private static int smart_config_default_aes_key;
+	
 
 	// Should be called when starting up the app, probably in
 	// Application.onCreate()
@@ -17,48 +29,48 @@ public class AppConfig {
 	}
 
 	public static String getApiHostname() {
-		int resId = useStaging() ? R.string.staging_hostname : R.string.prod_hostname;
+		int resId = useStaging() ? staging_hostname : prod_hostname;
 		return ctx.getString(resId);
 	}
 
 	public static String getApiUrlScheme() {
-		return ctx.getString(R.string.api_url_scheme);
+		return ctx.getString(api_url_scheme);
 	}
 
 	public static int getApiHostPort() {
-		return ctx.getResources().getInteger(R.integer.api_host_port);
+		return ctx.getResources().getInteger(api_host_port);
 	}
 
 	public static String getSparkTokenCreationCredentials() {
-		return ctx.getString(R.string.spark_token_creation_credentials);
+		return ctx.getString(spark_token_creation_credentials);
 	}
 
 	public static boolean useStaging() {
-		return ctx.getResources().getBoolean(R.bool.use_staging);
+		return ctx.getResources().getBoolean(use_staging);
 	}
 
 	public static String getApiVersion() {
-		return ctx.getString(R.string.api_version);
+		return ctx.getString(api_version);
 	}
 
 	public static String getApiParamAccessToken() {
-		return ctx.getString(R.string.api_param_access_token);
+		return ctx.getString(api_param_access_token);
 	}
 
 	public static String getSmartConfigHelloListenAddress() {
-		return ctx.getString(R.string.smart_config_hello_listen_address);
+		return ctx.getString(smart_config_hello_listen_address);
 	}
 
 	public static int getSmartConfigHelloListenPort() {
-		return ctx.getResources().getInteger(R.integer.smart_config_hello_port);
+		return ctx.getResources().getInteger(smart_config_hello_port);
 	}
 
 	public static int getSmartConfigHelloMessageLength() {
-		return ctx.getResources().getInteger(R.integer.smart_config_hello_msg_length);
+		return ctx.getResources().getInteger(smart_config_hello_msg_length);
 	}
 
 	public static String getSmartConfigDefaultAesKey() {
-		return ctx.getString(R.string.smart_config_default_aes_key);
+		return ctx.getString(smart_config_default_aes_key);
 	}
 
 }
